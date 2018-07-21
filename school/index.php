@@ -27,7 +27,8 @@ body {
 }
 </style>
 </head>
-<?php 
+<body>
+<?php
 $servername = "localhost";
 $username = "root";
 $password = "19951203";
@@ -50,10 +51,14 @@ catch(PDOException $e)
     }
 
 ?>
-<body>
+
     <form method="POST" action="insert.php">
     <div><span>Title</span><input type="text" name="data_name" required></div>
     <div><span>Comment</span><textarea name="data_body" required></textarea></div>
     <input type="submit" id="submit_btn" name="data_btn">
     </form>
+		<div>
+			<a href="signup.php"><button>Sign Up</button></a>
+			<a href="login.php"><button>Log In</button></a>
+		</div>
 </body>
