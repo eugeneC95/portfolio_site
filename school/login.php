@@ -2,6 +2,7 @@
 session_start();
 if(isset($_SESSION['id']) && isset($_SESSION['pass'])){
   //do auto login
+  header("refresh:2;url=loading.php");
 }else{
   //get form out and manually login
   echo "
