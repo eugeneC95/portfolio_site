@@ -5,10 +5,11 @@ if(isset($_SESSION['id']) && isset($_SESSION['pass'])){
   //do login
 }elseif (isset($_POST['loginid']) && isset($_POST['loginpass'])) {
   //do login
-}else if(isset($_POST['signid']) && isset($_POST['signpass']))
+}else if(isset($_POST['signup_btn'])){
   //sec setting
-  $signid = htmlspecialchars($_POST['$signid']);
-  $signpass = htmlspecialchars()$_POST['$signpass']);
+  $signid = htmlspecialchars($_POST['signid']);
+  $signpass = htmlspecialchars($_POST['signpass']);
+
   //do signup
   try {
       $dbh = new PDO("mysql:host=$hostname;dbname=bbs",$username,$password);
@@ -17,21 +18,24 @@ if(isset($_SESSION['id']) && isset($_SESSION['pass'])){
       $sth = $dbh->prepare('SELECT username FROM user;');
       $sth->execute();
       foreach ($sth as $row){
-        if($_POST['signid'] == $row['username']){
+        if($row['username'] == $signid){
+          echo $row['username'];
           $_SESSION['error'] = "Username Exits";
-          header("refresh:1;url=index.php");
-        }else{
-          $sth = $dbh->prepare('INSERT INTO user (username,password)VALUES($signid,$signpass);');
-          $sth->execute();
-        };
+          echo "username exits";
+          //header("refresh:1;url=index.php");
+        }
       }
+      //$sth = $dbh->prepare("INSERT INTO user (username,password)VALUES('$signid','$signpass');");
+      //$sth->execute();
+      echo "Creating User";
+      //header("refresh:2;url=index.php");
       $dbh = null;
       }
   catch(PDOException $e){
       echo $e->getMessage();
       }
 }else{
-  header("refresh:2;url=index.php");
+  //header("refresh:2;url=index.php");
 }
 
 

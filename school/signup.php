@@ -7,8 +7,8 @@ echo "
 <form action='loading.php' method='POST'>
   <label>Username<input type='text' name='signid' required></label>
   <label>Password<input type='password' name='signpass' required></label>
-  <input type='submit' name='submit_btn'>
-  <label>$_SESSION['error']</label>
+  <input type='submit' name='signup_btn'>
+  <label>$_SESSION[error]</label>
 </form>
 ";
 
