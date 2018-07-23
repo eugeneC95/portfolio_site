@@ -1,4 +1,5 @@
 <head>
+<?php session_start();?>
 <style>
 body {
 	background-color:#efefef;
@@ -61,4 +62,5 @@ catch(PDOException $e)
 			<a href="signup.php"><button>Sign Up</button></a>
 			<a href="login.php"><button>Log In</button></a>
 		</div>
+		<?php echo $_SESSION['status'].$_SESSION['id'];?>
 </body>
