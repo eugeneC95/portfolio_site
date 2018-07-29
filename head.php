@@ -30,5 +30,6 @@
 	<ul>
 		<li><a href="http://206.189.90.203/career/">My Project</a></li>
 		<li><a href="http://206.189.90.203/about.php">About Me</a></li>
+		<li><a href="http://206.189.90.203/school/">School Project</a></li>
 	</ul>
 </div>
