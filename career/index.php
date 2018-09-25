@@ -7,7 +7,10 @@
 
 	<div id='project'>
 		<h3>Creted Project</h3>
-		<a href="face.py">Face Recognition Login</a>
+		<a href="face.py">Face Recognition Login</a><br>
+		<a href="supreme/">Supreme AutoBot</a><span> Created by EugeneChan</span>
+
+
 	</div>
 </div>
 <?php include("../foot.php")?>

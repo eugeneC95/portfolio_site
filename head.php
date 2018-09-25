@@ -9,6 +9,7 @@
 		#container	{max-width: 1200px;margin: auto;background-color: #ffeee6;border-radius:3px;}
 		#top_container
 								{background-color: #bfa08e;padding-bottom: 9px;}
+		#project a 	{margin: auto;}
 		ul a:visited{color: white;}
 		ul					{margin: auto;display:inline-block;padding:0px;}
 		li					{display: inline;text-transform: uppercase;margin-left:20px;}
