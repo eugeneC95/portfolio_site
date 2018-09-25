@@ -8,7 +8,7 @@
 	<div id='project'>
 		<h3>Creted Project</h3>
 		<a href="face.py">Face Recognition Login</a><br>
-		<a href="supreme/">Supreme AutoBot</a><span> Created by EugeneChan</span>
+		<a href="supreme/">Supreme AutoBot v1.0</a><span> Created by EugeneChan</span>
 
 
 	</div>
