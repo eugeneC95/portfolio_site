@@ -1,5 +1,4 @@
 <head>
-<?php session_start();?>
 <style>
 body {
 	background-color:#efefef;
@@ -28,8 +27,7 @@ body {
 }
 </style>
 </head>
-<body>
-<?php
+<?php 
 $servername = "localhost";
 $username = "root";
 $password = "19951203";
@@ -52,23 +50,10 @@ catch(PDOException $e)
     }
 
 ?>
-		<?php
-		if($_SESSION['status'] == "logged"){
-			?>
-			<form method="POST" action="insert.php">
-	    <div><span>Id </span><input type="text" name="data_name" value="<?php echo $_SESSION[id];?>" disabled required><!--readonly--></div>
-	    <div><span>Comment </span><textarea name="data_body" required></textarea></div>
-	    <input type="submit" id="submit_btn" name="data_btn">
-	    </form>
-			<div>
-				<a href="signup.php"><button>Sign Up</button></a>
-				<a href="logout.php"><button>Log Out</button></a>
-		<?php
-		}else{
-			?>
-			<a href="signup.php"><button>Sign Up</button></a>
-			<a href="login.php"><button>Log In</button></a>
-		<?php
-		} ?>
-		</div>
+<body>
+    <form method="POST" action="insert.php">
+    <div><span>Title</span><input type="text" name="data_name" required></div>
+    <div><span>Comment</span><textarea name="data_body" required></textarea></div>
+    <input type="submit" id="submit_btn" name="data_btn">
+    </form>
 </body>
