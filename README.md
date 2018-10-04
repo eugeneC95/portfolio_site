@@ -1,6 +1,6 @@
 # portfolio_site
 <h2>Description</h2>
-career/supreme_bot/
+career/supreme/
 <h4>v1.0</h4>
   <p>Created with pyautogui,mostly are using pyautogui to crontol bot.</p>
 <h4>v2.0</h4>
