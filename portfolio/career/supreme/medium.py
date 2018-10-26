@@ -3,15 +3,15 @@ import numpy as np
 from PIL import ImageGrab
 import cv2
 import time
-name = 'CHAN YOU CHUN'
-email = 'ilvinchan95@hotmail.com'
-tel = '07014338763'
-post = '1340084'
-add = '東葛西5-36-10'
-card = '4624370172144375'
-exp1 = '10'
-exp2 = '2021'
-cvv = '276'
+name = 'x x x'
+email = 'xxx@hotmail.com'
+tel = '000-123456789'
+post = '111111'
+add = 'xxxxx'
+card = '1234567890123456'
+exp1 = '11'
+exp2 = '2020'
+cvv = '111'
 def screen_record():
     last_time = time.time()
     i = 0
@@ -26,8 +26,8 @@ def screen_record():
             break
         if i == 0:
             img = "small.png"
-            status = "small"
-            print(i,"small")
+            status = "medium"
+            print(i,"medium")
         elif i == 1:
             img = "cart.png"
             status = "cart"
@@ -97,9 +97,9 @@ def process_img(image,img,status):
     loc = np.where( res >= 0.8)
     for pt in zip(*loc[::-1]):
         cv2.rectangle(image, pt, (pt[0] + w, pt[1] + h), (255,0,0),1)
-        if status == "small":
+        if status == "medium":
             pyautogui.click(pt[0]+9, pt[1]+9)
-            pyautogui.typewrite('s')
+            pyautogui.typewrite('m')
             pyautogui.click(pt[0]+9, pt[1]+9)
             break
         elif status == "cart":
